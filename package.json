@@ -4,6 +4,7 @@
   "description": "A simple extension to native elements",
   "main": "index.js",
   "scripts": {
+    "server-bundle": "browserify --node index.js --standalone bel -o bundle.js",
     "start": "wzrd test/index.js:bundle.js",
     "test": "standard && node test/server.js && browserify test/index.js | testron",
     "bench": "wzrd bench/index.js:bundle.js"
